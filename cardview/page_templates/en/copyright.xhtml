@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja">
+    <head>
+        <title>Copyright</title>
+        <link href="../../common/styles/common.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <!--Header-->
+         <div class="svg_title" dir="ltr">
+
+			<h2 class="svg_title_cover">$chapter</h2>
+
+	  	#if ( $community-url && $community-url != "" )
+			<div class="header_btn"><a href="${community-url}">
+	      		<img src="../../common/images/b_portal.png"/></a>
+	      	</div>
+	    #end
+
+	     	<div class="header_btn">
+				<a href="../../cardview.xhtml#${file-basename}">
+	    			<img src="../../common/images/b_pallet.png"/></a>
+	  		</div>
+
+		</div>
+      	
+		<div style="clear:both;"/>
+
+        <div>
+
+  <p class="title">Name of Series</p>
+
+  <p class="subtitle">$!series-name</p>
+
+  <p class="title">Title</p>
+
+  <p class="subtitle">$!series-name Lesson $!vol $!series-title</p>
+
+  <div style="clear:both;"/>
+</div>
+        <div>
+  <p class="title">Author</p>
+
+  <p class="subtitle">$!author-name</p>
+
+  <div style="clear:both;"/>
+
+  #if ( $publisher && $publisher != "" )
+  <p class="title">Issued</p>
+
+  <p class="subtitle">$!publisher</p>
+  #end
+
+  #if ( $editor && $editor != "" )
+  <p class="title">Edited</p>
+
+  <p class="subtitle">$!editor</p>
+  #end
+
+  <p>$!published First edition<br/>
+      #if ( $revised && $revised != "")
+      $!revised Revised edition<br/>
+      #end
+      <!--$!update Reprinted--></p>
+
+  <div style="clear:both;"/>
+
+  <p>Copyright &#169; $!rights</p>
+
+</div>
+    </body>
+</html>
