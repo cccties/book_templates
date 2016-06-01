@@ -26,10 +26,19 @@ img{
     width: 100%;
 }
 
+ul{
+	margin-left: 1.5em;
+}
+
+ol{
+	margin-left: 1.5em;
+}
+
 li{
+    font-size:1em;
+    color:#333333;
     margin-top:0.5em;
     margin-bottom:0.5em;
-    font-size:1em;
 }
 
 
