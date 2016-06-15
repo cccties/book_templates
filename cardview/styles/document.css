@@ -169,3 +169,16 @@ a:hover, a:active {
 .padding_r{
 	margin-right: 18%;
 }
+
+div.width5 {
+	width: 5%;
+}
+div.width10 {
+	width: 10%;
+}
+div.width20 {
+	width: 20%;
+}
+div.width30 {
+	width: 30%;
+}
