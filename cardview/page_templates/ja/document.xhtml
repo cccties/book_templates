@@ -17,6 +17,8 @@
 
 		#if ( $section && $section != "" )
 			<h2 class="svg_title_topic">$section</h2>
+		#else
+			<h2 class="svg_title_topic"></h2>
 		#end
 
 	  	#if ( $community-url && $community-url != "" )
@@ -25,10 +27,17 @@
 	      	</div>
 	    #end
 
+		#if ( $section && $section != "" )
 	     	<div class="header_btn">
 				<a href="../../cardview.xhtml#${file-basename}">
 	    			<img src="../../common/images/b_pallet.png"/></a>
 	  		</div>
+	  	#else
+	     	<div class="header_btn">
+				<a href="../../cardview.xhtml">
+	    			<img src="../../common/images/b_pallet.png"/></a>
+	  		</div>
+		#end
 
 		</div>
       	
