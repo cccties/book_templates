@@ -6,7 +6,9 @@
         <dc:language>#if ( $language )$language#end</dc:language>
         <meta property="dcterms:modified">#if ( $update )$update#end</meta>
         <dc:date>#if ( $published )$published#end</dc:date>
-        <dc:rights>#if ( $rights )Copyrights &#169; $rights#end</dc:rights>
+#if ( $rights )
+        <dc:rights>Copyrights &#169; $rights</dc:rights>
+#end
         <dc:creator>#if ( $author-name )$author-name#end</dc:creator>
 #if ( $publisher )
         <dc:publisher id="publisher0">$publisher</dc:publisher>
