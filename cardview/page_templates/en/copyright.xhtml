@@ -11,7 +11,7 @@
 			<h2 class="svg_title_cover">$chapter</h2>
 
 	  	#if ( $community-url && $community-url != "" )
-			<div class="header_btn"><a href="${community-url}">
+			<div class="header_btn"><a href="#if ( $community-url.indexOf('?') != "-1")${community-url}&amp;chiloflag=1#else${community-url}?chiloflag=1#end">
 	      		<img src="../../common/images/b_portal.png"/></a>
 	      	</div>
 	    #end
