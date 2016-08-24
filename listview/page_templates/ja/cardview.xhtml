@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja">
+  <head>
+	<title>$index</title>
+	<link href="common/styles/common.css" rel="stylesheet" type="text/css"/>
+    <link href="common/styles/index.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+   <!-- パレット --> 
+      <div class="svg_toc_title">
+       	Contents
+      </div>
+
+		#foreach( $chapter in $chapters )
+		<div class="section" >
+		<p class="title" id="$chapter.id.replace('/','-')"><a href="$chapter.link">$chapter.title</a></p>
+
+		#if( $chapter.image-flag != "null")
+		#if( $chapter.image-flag != "")
+
+		<div style="clear: both;" />
+
+				<div class="quiz" dir="ltr">
+						<a href="$chapter.link">
+							<img src="$chapter.video-image" />
+						</a>
+				</div>
+         #end
+         #end
+
+		#if( $chapter.sections)
+		#foreach( $section in $chapter.sections )
+
+#if ( $section && $section.title )
+
+#if( $chapter.image-flag != "null")
+
+        <div class="topic"  id="$section.id.replace('/','-')">
+			<a href="$section.link">
+			#if( $section.image-flag != "null")
+				<img src="$section.video-image" />
+			#else
+				<img src="common/images/no_video.png" />
+			#end
+			</a>
+			<div><a href="$section.link">$section.title</a></div>
+        </div>
+
+#else
+        <p class="subtitle" id="$section.id.replace('/','-')"><a href="$section.link">$section.title</a></p>
+
+#end
+#end
+		#end
+		#end
+
+		</div>
+
+		#end
+
+  </body>
+</html>

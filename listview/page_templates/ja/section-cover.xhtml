@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja">
+    <head>
+	  #if ( $chapter && $chapter != "" )
+	  <title>$chapter</title>
+	  #end
+      <link href="../../common/styles/common.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <!--Header-->
+
+		#if ( $chapter && $chapter != "" )
+		<div class="svg_title">
+
+        	<div class="svg_title_cover">$chapter</div>
+        
+			<div class="header_btn">
+				<a href="../../cardview.xhtml#${file-basename}">
+    				<img src="../../common/images/b_pallet.png"/></a>
+  			</div>
+
+        </div>
+		#end
+
+		#if ( $main && $main != "")
+        <div class="indside_cover" >
+            <img alt="" src="$main"/>
+        </div>
+		#end
+    </body>
+</html>
