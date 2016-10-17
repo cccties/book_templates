@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja">
     <head>
         <title>Copyright</title>
-        <link href="../../common/styles/common.css" rel="stylesheet" type="text/css"/>
+        <link href="../../$template/styles/common.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <!--Header-->
@@ -15,7 +15,7 @@
 
   <p class="subtitle">Title</p>
 
-  <p>$!series-name Lesson $!vol $!series-title</p>
+  <p>$!series-name Lesson $!vol $!book-title</p>
 
   <div style="clear:both;"/>
 </div>
@@ -36,6 +36,12 @@
   <p class="subtitle">Edited</p>
 
   <p>$!editor</p>
+  #end
+
+  #if ( $version && $version != "" )
+  <p class="subtitle">Version</p>
+
+  <p>$!version</p>
   #end
 
   <p>$!published First edition<br/>

@@ -205,11 +205,11 @@ div.width30 {
 }
 
 /* Ver. 2のセクションのスタイル*/
-.subject_chapter {
+.subject_section {
 	height: 3em;
 }
 
-.subject_section {
+.subject_topic {
 	height: 2em;
 }
 

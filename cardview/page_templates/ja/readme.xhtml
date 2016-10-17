@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja">
   <head>
-    <title>$chapter</title>
-	  <link href="../../common/styles/common.css" rel="stylesheet" type="text/css"/>
+    <title>$section</title>
+	  <link href="../../$template/styles/common.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
     <!--Header-->
-		#if ( $chapter && $chapter != "" )
+		#if ( $section && $section != "" )
 		<div class="svg_title">
 
-        	<div class="svg_title_cover">$chapter</div>
+        	<div class="svg_title_cover">$section</div>
         
 			<div class="header_btn">
 				<a href="../../cardview.xhtml#${file-basename}">
-    				<img src="../../common/images/b_pallet.png"/></a>
+    				<img src="../../$template/images/b_pallet.png"/></a>
   			</div>
 
         </div>

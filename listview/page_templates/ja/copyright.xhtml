@@ -8,17 +8,17 @@
         <!--Header-->
         <div class="svg_title" dir="ltr">
 
-			<h2 class="svg_title_cover">$chapter</h2>
+			<h2 class="svg_title_cover">$section</h2>
 
 	  	#if ( $community-url && $community-url != "" )
 			<div class="header_btn"><a href="#if ( $community-url.indexOf('?') != "-1")${community-url}&amp;chiloflag=1#else${community-url}?chiloflag=1#end">
-	      		<img src="../../common/images/b_portal.png"/></a>
+	      		<img src="../../$template/images/b_portal.png"/></a>
 	      	</div>
 	    #end
 
 	     	<div class="header_btn">
 				<a href="../../cardview.xhtml#${file-basename}">
-	    			<img src="../../common/images/b_pallet.png"/></a>
+	    			<img src="../../$template/images/b_pallet.png"/></a>
 	  		</div>
 
 		</div>
@@ -33,7 +33,7 @@
 
   <p class="title">タイトル</p>
 
-  <p class="subtitle">$!series-name 第$!vol章 $!series-title</p>
+  <p class="subtitle">$!series-name 第$!vol章 $!book-title</p>
 
   <div style="clear:both;"/>
 </div>
@@ -54,6 +54,12 @@
   <p class="title">編集</p>
 
   <p class="subtitle">$!editor</p>
+  #end
+
+  #if ( $version && $version != "" )
+  <p class="title">Version</p>
+
+  <p class="subtitle">$!version</p>
   #end
 
   <p>$!published 初版<br/>

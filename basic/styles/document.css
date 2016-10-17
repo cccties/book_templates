@@ -22,3 +22,30 @@ div.img5 {
 	width:5%;
 }
 */
+
+/* oba */
+
+dl.word {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.word dt {
+	float: left;
+}
+
+.word dd {
+	margin-left: 40%;
+}
+
+dl.sentence {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.sentence dt {
+}
+
+.sentence dd {
+	margin-left: 2em;
+}

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja">
     <head>
-        <title>$chapter</title>
-        <link href="../../common/styles/common.css" rel="stylesheet" type="text/css"/>
-        <link href="../../common/styles/document.css" rel="stylesheet" type="text/css"/>
+        <title>$section</title>
+        <link href="../../$template/styles/common.css" rel="stylesheet" type="text/css"/>
+        <link href="../../$template/styles/document.css" rel="stylesheet" type="text/css"/>
 #foreach ( $e in $javascript-file )
 #if ( $e != "" )
         <script src="$e" type="text/javascript"></script>
@@ -13,43 +13,43 @@
     <body>
         <!--Header-->
         <div class="subject-all">
-		#if ( $chapter && $chapter != "" )
-        <div class="subject_chapter">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="$chapter-view-box" width="$chapter-width">
-				#if ( $chapter-rect && $chapter-rect != "" )
-                <rect $chapter-rect/>
-				#end
-                <text fill="$chapter-fill" font-family="$chapter-font-family"
-					  font-size="$chapter-font-size" stroke="$chapter-stroke"
-                #if ( $chapter-stroke-width && $chapter-stroke-width != "" )
-                stroke-width="$chapter-stroke-width"
-                #end
-				  text-anchor="$chapter-text-anchor"
-					  x="$chapter-x" y="$chapter-y">$chapter</text>
-            </svg>
-        </div>
-		#end
 		#if ( $section && $section != "" )
-        <h2 class="subject_section">
+        <div class="subject_section">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="$section-view-box" width="$section-width">
 				#if ( $section-rect && $section-rect != "" )
                 <rect $section-rect/>
 				#end
                 <text fill="$section-fill" font-family="$section-font-family"
 					  font-size="$section-font-size" stroke="$section-stroke"
-				#if ( $section-stroke-width && $section-stroke-width != "" )
-				stroke-width="$section-stroke-width"
-				#end
-					  text-anchor="$section-text-anchor"
+                #if ( $section-stroke-width && $section-stroke-width != "" )
+                stroke-width="$section-stroke-width"
+                #end
+				  text-anchor="$section-text-anchor"
 					  x="$section-x" y="$section-y">$section</text>
+            </svg>
+        </div>
+		#end
+		#if ( $topic && $topic != "" )
+        <h2 class="subject_topic">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="$topic-view-box" width="$topic-width">
+				#if ( $topic-rect && $topic-rect != "" )
+                <rect $topic-rect/>
+				#end
+                <text fill="$topic-fill" font-family="$topic-font-family"
+					  font-size="$topic-font-size" stroke="$topic-stroke"
+				#if ( $topic-stroke-width && $topic-stroke-width != "" )
+				stroke-width="$topic-stroke-width"
+				#end
+					  text-anchor="$topic-text-anchor"
+					  x="$topic-x" y="$topic-y">$topic</text>
             </svg>
         </h2>
 		#end
 		</div>
 		#if ( $community-url && $community-url != "" )
         <div class="community">
-            <a href="#if ( $community-url.indexOf('?') != "-1")${community-url}&amp;chiloflag=1#else${community-url}?chiloflag=1#end">
-                <img src="../../common/images/b_portal.png"/>
+            <a href="${community-url}">
+                <img src="../../$template/images/b_portal.png"/>
             </a>
         </div>
 		#end
@@ -80,7 +80,7 @@
 
 	  #if ( $cc-link && $cc-link != "" )
 	  <div class="width20 right">
-		<a href="$cc-link"> <img alt="$cc-alt" src="$cc-img"/></a>
+		<a href="$cc-link"> <img alt="$cc-alt" src="../../$template/images/${cc-alt}.png"/></a>
 	  </div>
 	  #end
     </body>

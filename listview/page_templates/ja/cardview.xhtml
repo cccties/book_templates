@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja">
   <head>
 	<title>$index</title>
-	<link href="common/styles/common.css" rel="stylesheet" type="text/css"/>
-    <link href="common/styles/index.css" rel="stylesheet" type="text/css"/>
+	<link href="$template/styles/common.css" rel="stylesheet" type="text/css"/>
+    <link href="$template/styles/index.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
    <!-- パレット --> 
@@ -11,43 +11,31 @@
        	Contents
       </div>
 
-		#foreach( $chapter in $chapters )
+		#foreach( $section in $sections )
 		<div class="section" >
-		<p class="title" id="$chapter.id.replace('/','-')"><a href="$chapter.link">$chapter.title</a></p>
+		<p class="title" id="$section.id.replace('/','-')"><a href="$section.link">$section.title</a></p>
 
-		#if( $chapter.image-flag != "null")
-		#if( $chapter.image-flag != "")
 
-		<div style="clear: both;" />
+		#if( $section.topics)
+		#foreach( $topic in $section.topics )
 
-				<div class="quiz" dir="ltr">
-						<a href="$chapter.link">
-							<img src="$chapter.video-image" />
-						</a>
-				</div>
-         #end
-         #end
+#if ( $topic && $topic.title )
 
-		#if( $chapter.sections)
-		#foreach( $section in $chapter.sections )
+#if( $section.image-flag != "null")
 
-#if ( $section && $section.title )
-
-#if( $chapter.image-flag != "null")
-
-        <div class="topic"  id="$section.id.replace('/','-')">
-			<a href="$section.link">
-			#if( $section.image-flag != "null")
-				<img src="$section.video-image" />
+        <div class="topic"  id="$topic.id.replace('/','-')">
+			<a href="$topic.link">
+			#if( $topic.image-flag != "null")
+				<img src="$topic.video-image" />
 			#else
-				<img src="common/images/no_video.png" />
+				<img src="$template/images/no_video.png" />
 			#end
 			</a>
 			<div><a href="$section.link">$section.title</a></div>
         </div>
 
 #else
-        <p class="subtitle" id="$section.id.replace('/','-')"><a href="$section.link">$section.title</a></p>
+        <p class="subtitle" id="$topic.id.replace('/','-')"><a href="$topic.link">$topic.title</a></p>
 
 #end
 #end

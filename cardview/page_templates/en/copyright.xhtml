@@ -2,23 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" xml:lang="ja">
     <head>
         <title>Copyright</title>
-        <link href="../../common/styles/common.css" rel="stylesheet" type="text/css"/>
+        <link href="../../$template/styles/common.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <!--Header-->
          <div class="svg_title" dir="ltr">
 
-			<h2 class="svg_title_cover">$chapter</h2>
+			<h2 class="svg_title_cover">$section</h2>
 
 	  	#if ( $community-url && $community-url != "" )
-			<div class="header_btn"><a href="#if ( $community-url.indexOf('?') != "-1")${community-url}&amp;chiloflag=1#else${community-url}?chiloflag=1#end">
-	      		<img src="../../common/images/b_portal.png"/></a>
+			<div class="header_btn"><a href="${community-url}">
+	      		<img src="../../$template/images/b_portal.png"/></a>
 	      	</div>
 	    #end
 
 	     	<div class="header_btn">
 				<a href="../../cardview.xhtml#${file-basename}">
-	    			<img src="../../common/images/b_pallet.png"/></a>
+	    			<img src="../../$template/images/b_pallet.png"/></a>
 	  		</div>
 
 		</div>
@@ -33,7 +33,7 @@
 
   <p class="title">Title</p>
 
-  <p class="subtitle">$!series-name Lesson $!vol $!series-title</p>
+  <p class="subtitle">$!series-name Lesson $!vol $!book-title</p>
 
   <div style="clear:both;"/>
 </div>
@@ -54,6 +54,12 @@
   <p class="title">Edited</p>
 
   <p class="subtitle">$!editor</p>
+  #end
+
+  #if ( $version && $version != "" )
+  <p class="title">Version</p>
+
+  <p class="subtitle">$!version</p>
   #end
 
   <p>$!published First edition<br/>

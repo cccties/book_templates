@@ -9,7 +9,7 @@
     <body>
         <!--Header-->
 		#if ( $section && $section != "" )
-        <div>
+        <div class="subject_cover">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" viewBox="$section-view-box" width="$section-width">
 				#if ( $section-rect && $section-rect != "" )
                 <rect $section-rect/>
@@ -20,12 +20,15 @@
                 stroke-width="$section-stroke-width"
                 #end
 				  text-anchor="$section-text-anchor"
-					  x="650" y="$section-y">$section</text>
+					  x="$section-x" y="$section-y">$section</text>
             </svg>
         </div>
 		#end
+        <div class="community">
+                <img src="../../$template/images/space.png"/>
+        </div>
 		#if ( $main && $main != "")
-        <div>
+        <div class="l_content clear">
             <img alt="" src="$main"/>
         </div>
 		#end

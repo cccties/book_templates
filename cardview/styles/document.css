@@ -129,14 +129,14 @@ a:hover, a:active {
 
 .subtitle1{
 	font-size: 1.6000em;
-	color: #235c9d;
+	color: #269DDC;
  	display:inline;
 	line-height: 60px;
 }
 
 .subtitle2 {
 	font-size:1.4000em; 
-	color:#4A6EA8; 
+	color:#269DDC;
 	padding-top: 0.5000em;
 	padding-bottom: 0.1000em;
 	margin: 0.0000em;
@@ -144,7 +144,7 @@ a:hover, a:active {
 
 .subtitle3 {
 	font-size:1.1000em; 
-	color:#4A6EA8; 
+	color:#269DDC;
 	padding-top: 0.5000em;
 	padding-bottom: 0.1000em;
 	margin: 0.0000em;
@@ -181,4 +181,31 @@ div.width20 {
 }
 div.width30 {
 	width: 30%;
+}
+
+/* oba */
+
+dl.word {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.word dt {
+	float: left;
+}
+
+.word dd {
+	margin-left: 40%;
+}
+
+dl.sentence {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+.sentence dt {
+}
+
+.sentence dd {
+	margin-left: 2em;
 }
