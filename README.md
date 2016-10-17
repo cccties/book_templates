@@ -11,6 +11,10 @@ English version is [HERE](#english).
 
 ApacheLicense2.0の元、提供しております。 (see [LICENSE.txt](LICENSE.txt)) 
 
+### Copyright
+
+Copyright © 2015 NPO CCC-TIES All Right Reserved.
+
 ***
 
 # <a name="english"> book templates
@@ -22,4 +26,8 @@ ApacheLicense2.0の元、提供しております。 (see [LICENSE.txt](LICENSE.
 
 ### Licensing
 
-ApacheLicense2.0の元、提供しております。 (see [LICENSE.txt](LICENSE.txt)) 
+We offer CHiLO Producer under the license of ApacheLicense2.0. (see [LICENSE.txt](LICENSE.txt)) 
+
+### Copyright
+
+Copyright © 2015 NPO CCC-TIES All Right Reserved.
