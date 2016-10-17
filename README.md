@@ -9,7 +9,7 @@ English version is [HERE](#english).
 
 ### Licensing
 
-ApacheLicense2.0の元、提供しております。 (see LICENSE.txt)
+ApacheLicense2.0の元、提供しております。 (see [LICENSE.txt](LICENSE.txt)) 
 
 ***
 
@@ -22,4 +22,4 @@ ApacheLicense2.0の元、提供しております。 (see LICENSE.txt)
 
 ### Licensing
 
-ApacheLicense2.0の元、提供しております。 (see LICENSE.txt)
+ApacheLicense2.0の元、提供しております。 (see [LICENSE.txt](LICENSE.txt)) 
