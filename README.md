@@ -19,10 +19,10 @@ Copyright © 2015 NPO CCC-TIES
 
 # <a name="english"> book templates
 
-これはCHiLO-Producer（ https://github.com/cccties/chilo-producer ）専用のブックテンプレート集です。
-単体では、利用することはできません。
+This is a template collection exclusively for CHiLO-Producer (https://github.com/cccties/chilo-producer)
+Can not be used separately.
 
-利用方法は、CHiLO-ProducerのREADME（ https://github.com/cccties/chilo-producer#how-to-use-chilo-producer ）をご覧ください。
+For usage, see CHiLO-Producer README (https://github.com/cccties/chilo-producer#how-to-use-chilo-producer)
 
 ### Licensing
 
