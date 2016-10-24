@@ -31,11 +31,14 @@ dl.word {
 }
 
 .word dt {
-	float: left;
+	display: inline-block;
+	width: 55%;
 }
 
 .word dd {
-	margin-left: 40%;
+	display: inline-block;
+	width: 35%;
+	vertical-align: top;
 }
 
 dl.sentence {

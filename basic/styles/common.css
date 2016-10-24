@@ -191,6 +191,11 @@ div.width30 {
 	margin: auto;
 }
 
+.audio {
+	text-align: center;
+	margin: auto;
+}
+
 .link_icon{
 	display: inline-block;
 	vertical-align: middle;
