@@ -24,7 +24,6 @@
 #if( $section.image-flag != "null")
 
         <div class="topic"  id="$topic.id.replace('/','-')">
-        	<div>$topic.title</div>
 			<a href="$topic.link">
 			#if( $topic.image-flag != "null")
 				<img src="$topic.video-image" />
@@ -32,6 +31,7 @@
 				<img src="$template/images/no_video.png" />
 			#end
 			</a>
+			<div><a href="$topic.link">$topic.title</a></div>
         </div>
 
 #else
