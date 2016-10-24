@@ -20,7 +20,7 @@ Copyright © 2015 NPO CCC-TIES
 # <a name="english"> book templates
 
 This template collection is designed exclusively for CHiLO-Producer (https://github.com/cccties/chilo-producer).
-Can not be used separately.
+Can not be used alone.
 
 For usage, see CHiLO-Producer README (https://github.com/cccties/chilo-producer#how-to-use-chilo-producer)
 
