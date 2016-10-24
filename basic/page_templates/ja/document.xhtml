@@ -48,7 +48,7 @@
 		</div>
 		#if ( $community-url && $community-url != "" )
         <div class="community">
-            <a href="${community-url}">
+            <a href="#if ( $community-url.indexOf('?') != "-1")${community-url}&amp;chiloflag=1#else${community-url}?chiloflag=1#end">
                 <img src="../../$template/images/b_portal.png"/>
             </a>
         </div>
