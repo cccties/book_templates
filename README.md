@@ -3,7 +3,7 @@ English version is [HERE](#english).
 # book templates
 
 これはCHiLO-Producer（ https://github.com/cccties/chilo-producer ）専用のブックテンプレート集です。
-単体では、利用することはできません。
+このテンプレートだけでは、利用することはできません。
 
 利用方法は、CHiLO-ProducerのREADME（ https://github.com/cccties/chilo-producer#利用方法 ）をご覧ください。
 
