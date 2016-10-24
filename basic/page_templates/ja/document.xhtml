@@ -72,6 +72,11 @@
             <img alt="" src="$main"/>
         </div>
 		#end
+		#if ( $main-type == "audio" )
+        <div class="audio">
+            <audio style="max-width: 100%;" controls="controls" src="$main" >audio tag not supported</audio>
+        </div>
+		#end
 		#end
 		
 		#if ( $text && $text != "")
