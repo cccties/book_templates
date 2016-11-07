@@ -50,8 +50,8 @@
 		    #if ( $video-image )
 		        #set( $poster = "$video-image" )
 		    #end
-        <div class="video">
-            <video style="max-width: 100%;height:auto;" controls="controls" poster="$poster" src="$main">video tag not supported</video>
+        <div class="video#if ( $video-height == "240" ) video4-3#end">
+            <video style="width: 100%;height:auto;" controls="controls" poster="$poster" src="$main">video tag not supported</video>
         </div>
 		#end
 

@@ -81,6 +81,18 @@ a:hover, a:active {
 	clear:both;
 }
 
+.video4-3 {
+	width: 75%;
+}
+
+@media screen and (max-width:420px) { 
+
+.video4-3 {
+	width: 100%;
+}
+}
+
+
 .audio {
 	text-align: center;
 	margin: auto;
