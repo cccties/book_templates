@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId" version="3.0" xml:lang="ja">
+<package xmlns="http://www.idpf.org/2007/opf"#if ($cover-image) prefix="rendition: http://www.idpf.org/vocab/rendition/#"#end unique-identifier="BookId" version="3.0" xml:lang="ja">
     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
         <dc:identifier id="BookId">#if ( $identifier )${identifier}#end</dc:identifier>
         <dc:title>#if ( $series-name && $vol && $book-title )$series-name Lesson $vol $book-title#end</dc:title>
@@ -28,7 +28,7 @@
     <spine>
 #foreach( $e in $spine-list )
 #if ( $e )
-        <itemref idref="$e"/>
+        <itemref idref="$e"#if( $e.matches('.*001.xhtml')) properties="rendition:layout-pre-paginated"#end/>
 #end		
 #end
     </spine>
