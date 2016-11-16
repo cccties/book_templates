@@ -63,6 +63,17 @@ p{
 	word-wrap: break-word;
 	line-height: 1.2em;
 }
+
+/* 中央左寄せ */
+.wrapper {
+	max-width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
+.wrapper p {
+	text-align: left;
+}
+
 a {
 	color: #0000FF;
 	font-size: 1em;
