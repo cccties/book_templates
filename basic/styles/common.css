@@ -197,9 +197,29 @@ div.width30 {
 	vertical-align: middle;
 }
 
+/* videoタグ */
+
 .video {
 	text-align: center;
 	margin: auto;
+	clear:both;
+}
+
+/* youtube */
+
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  margin-bottom:0.5em;
+}
+
+.youtube iframe{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100% !important;
+	height: 100% !important;
 }
 
 .audio {

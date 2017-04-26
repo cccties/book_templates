@@ -4,6 +4,21 @@
         <title>$section</title>
         <link href="../../$template/styles/common.css" rel="stylesheet" type="text/css"/>
         <link href="../../$template/styles/document.css" rel="stylesheet" type="text/css"/>
+#if ( $youtube-id && $youtube-id != "" )
+        <script>
+function onYouTubeIframeAPIReady(){
+    var CYT = window.parent.chilo.youtube;
+    var player = new YT.Player("chilo-iframe", {
+        events: {
+            'onReady': CYT.onPlayerReady,
+            'onStateChange': CYT.onStateChange
+        }
+    });
+    CYT.onAPIReady(player);
+}
+        </script>
+        <script src="https://www.youtube.com/iframe_api"></script>
+#end
 #foreach ( $e in $javascript-file )
 #if ( $e != "" )
         <script src="$e" type="text/javascript"></script>
@@ -55,6 +70,11 @@
 		#end
         <div style="clear:both;"/>
 
+		#if ( $youtube-id && $youtube-id != "" )
+        <div class="video youtube">
+            <iframe id="chilo-iframe" width="$video-width" height="$video-height" src="https://www.youtube.com/embed/${youtube-id}?enablejsapi=1" frameborder="0"></iframe>
+        </div>
+		#else
 		#if ( $main && $main != "" )
 
 		#if ( $main-type == "video" )
@@ -62,8 +82,15 @@
 		    #if ( $video-image )
 		        #set( $poster = "$video-image" )
 		    #end
+		    #if ( $clip-begin )
+		        #set( $main = "$main#t=$clip-begin" )
+			#if ( $clip-end )
+			    #set( $main = "$main,$clip-end" )
+			#end
+		    #end
+
         <div class="video">
-            <video style="max-width: 100%;height:auto;" controls="controls" height="$video-height" poster="$poster" src="$main" width="$video-width">video tag not supported</video>
+            <video id="chilo-video" style="max-width: 100%;height:auto;" controls="controls" height="$video-height" poster="$poster" src="$main" width="$video-width">video tag not supported</video>
         </div>
 		#end
 
