@@ -5,6 +5,7 @@
         <link href="../../$template/styles/common.css" rel="stylesheet" type="text/css"/>
         <link href="../../$template/styles/document.css" rel="stylesheet" type="text/css"/>
 #if ( $youtube-id && $youtube-id != "" )
+#if ( $clip-begin && $clip-begin != "" )
         <script>
 function onYouTubeIframeAPIReady(){
     var CYT = window.parent.chilo.youtube;
@@ -18,6 +19,7 @@ function onYouTubeIframeAPIReady(){
 }
         </script>
         <script src="https://www.youtube.com/iframe_api"></script>
+#end
 #end
 #foreach ( $e in $javascript-file )
 #if ( $e != "" )
@@ -72,7 +74,8 @@ function onYouTubeIframeAPIReady(){
 
 		#if ( $youtube-id && $youtube-id != "" )
         <div class="video youtube">
-            <iframe id="chilo-iframe" width="$video-width" height="$video-height" src="https://www.youtube.com/embed/${youtube-id}?enablejsapi=1" frameborder="0"></iframe>
+            <iframe id="chilo-iframe" width="$video-width" height="$video-height" src="https://www.youtube.com/embed/${youtube-id}?#if ( $clip-begin && $clip-begin != "" )enablejsapi=1#else
+autoplay=1#end&amp;rel=0" frameborder="0"></iframe>
         </div>
 		#else
 		#if ( $main && $main != "" )
